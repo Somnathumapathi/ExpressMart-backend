@@ -23,3 +23,7 @@ mongoose.connect(DB).then(()=>{
 app.listen(PORT, "0.0.0.0", () => {
     console.log(`Connected at port ${PORT}`)
 })
+
+app.get('/', (req, res) => {
+    res.send("This is the main route of express mart")
+})

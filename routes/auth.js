@@ -54,7 +54,7 @@ return res.json(true)
 }
 })
 
-authRouter.get('/', auth, async (req, res) => {
+authRouter.get('/get-user', auth, async (req, res) => {
    const user = await User.findById(req.user)
    res.json({...user._doc, token : req.token})
 })
